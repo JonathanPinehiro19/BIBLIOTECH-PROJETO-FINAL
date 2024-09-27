@@ -63,14 +63,11 @@ body {
 
 /* Logo */
 .img-logo img {
-    width: 20rempx;
+    width: 100%;
     height: auto;
-}
-
-/* Ícone de olho para mostrar/ocultar senha */
-.input-group {
-    display: flex;
-    align-items: center;
+    max-width: 300px; /* Define o tamanho máximo da imagem */
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
 }
 
 .input-group .form-control {

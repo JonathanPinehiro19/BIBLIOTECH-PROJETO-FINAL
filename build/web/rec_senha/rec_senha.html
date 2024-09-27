@@ -20,9 +20,15 @@
                 <div class="card-body">
                     <h3 class="heading">Recuperação de Conta</h3>
                     <center>
-                        <a class="img-logo" href="https://freeimage.host/br">
-                            <img src="https://iili.io/dgMdocQ.png" alt="Logo" id="logo-img" border="0">
+                        <a class="img-logo" href="#">
+                            <img style="
+                                 width: 100%;
+                                 height: auto;
+                                 max-width: 300px; /* Define o tamanho máximo da imagem */
+                                 display: block;
+                                 margin: 0 auto; /* Centraliza a imagem horizontalmente */" src="../imagem/logo-real.png" border="0">
                         </a>
+
                     </center>
                     <form id="signup-form" action="rec_senha.jsp" method="post">                       
                         <div class="form-group">    
@@ -31,20 +37,28 @@
                         </div>
                         <br>
                         <div>
-                            
-                        <div class="form-group text-center">
-                        <input type="submit" name="submit" class="btn-primary" value="Enviar">
-                        </div>
-                        <div  class="form-group text-center">
-                            <button class="btn-primary" type="button" onclick="window.location.href = '../index.html'">Voltar</button>
 
-                        </div>
+                            <div class="form-group text-center">
+                                <input type="submit" name="submit" class="btn-primary" value="Enviar">
+                            </div>
+                            <div  class="form-group text-center">
+                                <button class="btn-primary" type="button" onclick="window.location.href = '../index.html'">Voltar</button>
+
+                            </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </center>
+    <footer style="background-color: #f8f9fa; padding: 20px; text-align: center; margin-top: 20px;">
+        <div class="container">
+            <p><strong>Endereço:</strong> Largo do Bodegão, 46 - Santa Cruz, Rio de Janeiro - RJ, 23550-133</p>
+            <p><strong>Email para comunicação:</strong> bibliotechprojeto@gmail.com</p>
+            <p>Esse é um projeto desenvolvido pela turma 6311/23 de técnico em informática da <strong>Escola Técnica Estadual de Santa Cruz</strong>.</p>
+            <strong>Fundação de Apoio a Escola Técnica - FATEC</strong>
+        </div>
+    </footer>
 
 </body>
 </html>

@@ -8,31 +8,50 @@
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
+
     <body>
-        <center>
-        <div id="signup" class="d-flex justify-content-center align-items-center min-vh-100">
+    <center>
+        <div id="signup" class="d-flex justify-content-center align-items-center min-vh-100" >
             <div class="container card shadow-sm">
                 <div class="card-body">
                     <h3 class="heading">Login</h3>
                     <center>
-                        <a class="img-logo" href="#">
-                            <img src="imagem/logo-real.png" border="0">
+                        <a  class="img-logo" href="#">
+                            <img style="
+                                 width: 100%;
+                                 height: auto;
+                                 max-width: 300px; /* Define o tamanho máximo da imagem */
+                                 display: block;
+                                 margin: 0 auto; /* Centraliza a imagem horizontalmente */" src="imagem/logo-real.png" border="0">
                         </a>
                     </center>
-                    <form id="signup-form" action="cadastro.jsp" method="post">                      
+                    <form id="signup-form" action="login.jsp" method="post" onsubmit="return validateForm(event)">                      
                         <div class="form-group">
                             <label for="usuario" class="text-info">Usuário:</label>
                             <input type="text" name="usuario" id="usuario" class="form-control" >
                         </div>     <br>                                                                                        
                         <div class="form-group">
                             <label for="senha" class="text-info">Senha:</label>
-                            <input type="password" name="senha" id="senha" class="form-control" >
+                            <div style="align-items: baseline" class="input-group">
+                                <input type="password" name="senha" id="senha" class="form-control" required placeholder="Digite sua senha">
+                                <div style="height: 2.5rem;
+                                     display: flex;
+                                     align-items: flex-end;
+                                     justify-content: center;
+                                     cursor: pointer;
+                                     padding: 0 5px; /* Ajuste conforme necessário */"  class="input-group-append">
+                                    <span class="input-group-text" onclick="togglePassword('senha', 'eyeIcon1')">
+                                        <i style="font-size: 1.2 rem;" id="eyeIcon1" class="fa fa-eye"></i>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
-                         
-                                                   
-                    
+
+
+
+
                         <div><br>
                             <A href="cadastro/cadastro.html"> Cadastrar-se   </a><br><br>
                             <A href="rec_senha/rec_senha.html"> Recuperar Conta</a>
@@ -40,12 +59,48 @@
                         <br>
                         <div class="form-group text-center">
                             <input type="submit" name="submit" class="btn-primary" value="Entrar">
-                            
+
                         </div>
+
                     </form>
+                    <script>
+                        function togglePassword(fieldId, iconId) {
+                            var passwordField = document.getElementById(fieldId);
+                            var eyeIcon = document.getElementById(iconId);
+
+                            if (passwordField.type === "password") {
+                                passwordField.type = "text";
+                                eyeIcon.classList.remove("fa-eye");
+                                eyeIcon.classList.add("fa-eye-slash");
+                            } else {
+                                passwordField.type = "password";
+                                eyeIcon.classList.remove("fa-eye-slash");
+                                eyeIcon.classList.add("fa-eye");
+                            }
+                        }
+                        function validateForm(event) {
+                            var usuario = document.getElementById("usuario").value;
+                            var senha = document.getElementById("senha").value;
+
+                            if (usuario === "" || senha === "") {
+                                alert("Os campos não podem estar vazios");
+                                event.preventDefault(); // Impede o envio do formulário
+                                return false; // Evita o envio
+                            }
+                            return true; // Permite o envio do formulário se os campos estiverem preenchidos
+                        }
+                    </script>
                 </div>
             </div>
         </div>
     </center>
+    <footer style="background-color: #f8f9fa; padding: 20px; text-align: center; margin-top: 20px;">
+        <div class="container">
+            <p><strong>Endereço:</strong> Largo do Bodegão, 46 - Santa Cruz, Rio de Janeiro - RJ, 23550-133</p>
+            <p><strong>Email para comunicação:</strong> bibliotechprojeto@gmail.com</p>
+            <p>Esse é um projeto desenvolvido pela turma 6311/23 de técnico em informática da <strong>Escola Técnica Estadual de Santa Cruz</strong>.</p>
+            <strong>Fundação de Apoio a Escola Técnica - FATEC</strong>
+        </div>
+    </footer>
 </body>
 </html>
