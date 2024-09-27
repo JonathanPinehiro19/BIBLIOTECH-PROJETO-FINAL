@@ -1,0 +1,179 @@
+/* Estilo geral da página */
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container principal */
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F8F9FD;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+    border-radius: 20px;
+    padding: 25px 35px;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: rgba(133, 189, 215, 0.878) 0px 30px 30px -20px;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Título da página */
+.heading {
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    color: rgb(16, 137, 211);
+}
+
+/* Campo de input */
+.form-control {
+    border-radius: 20px;
+    padding: 15px 20px;
+    margin-top: 15px;
+    box-shadow: #cff0ff 0px 10px 10px -5px;
+    border: 2px solid transparent;
+    font-size: 16px;
+}
+
+.form-control:focus {
+    border: 2px solid #12B1D1;
+    outline: none;
+}
+
+/* Botão de cadastro */
+.btn-primary {
+    background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+    border: none;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: rgba(133, 189, 215, 0.878) 0px 20px 10px -15px;
+    transition: all 0.2s ease-in-out;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(133, 189, 215, 0.878) 0px 23px 10px -20px;
+}
+
+.btn-primary:active {
+    transform: scale(0.95);
+    box-shadow: rgba(133, 189, 215, 0.878) 0px 15px 10px -10px;
+}
+
+/* Logo */
+.img-logo img {
+    width: 20rempx;
+    height: auto;
+}
+
+/* Ícone de olho para mostrar/ocultar senha */
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-group .form-control {
+    border-radius: 20px 0 0 20px;
+    box-shadow: none;
+}
+
+.input-group-append {
+    cursor: pointer;
+}
+
+.input-group-append .input-group-text {
+    background-color: transparent;
+    border: none;
+}
+
+.fa-eye, .fa-eye-slash {
+    font-size: 1.5rem;
+    color: #12B1D1;
+}
+
+/* Estilo de erros e mensagens */
+.text-succces {
+    align-items: center;
+    font-style: normal;
+}
+
+/* Card com sombra */
+.card {
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    border-radius: 0.5rem;
+    max-width: 100%;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    background-color: #fff;
+}
+
+/* Ícone de dismiss */
+.dismiss {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: black;
+    border: 2px solid #D1D5DB;
+    font-size: 1rem;
+    font-weight: 300;
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    transition: .3s ease;
+}
+
+.dismiss:hover {
+    background-color: #ee0d0d;
+    border: 2px solid #ee0d0d;
+    color: #fff;
+}
+
+/* Estilo de ações */
+.history {
+    display: inline-flex;
+    padding: 0.5rem 1rem;
+    background-color: #1aa06d;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    justify-content: center;
+    width: 100%;
+    border-radius: 0.375rem;
+    border: none;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Animação */
+@keyframes animate {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.09);
+    }
+}
+
+/* Estilo do botão de controle de senha */
+.track {
+    display: inline-flex;
+    margin-top: 0.75rem;
+    padding: 0.5rem 1rem;
+    color: #242525;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    justify-content: center;
+    width: 100%;
+    border-radius: 0.375rem;
+    border: 1px solid #D1D5DB;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
