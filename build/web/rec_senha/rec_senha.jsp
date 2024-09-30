@@ -29,7 +29,8 @@
         if (rs.next()) {
             senha = rs.getString("senha_hash");  // Pega a senha
         } else {
-            out.println("<script>alert('E-mail não encontrado!'); window.location.href = 'rec_senha.jsp';</script>");
+            response.sendRedirect("rec_senha_fail.jsp");
+            // out.println("<script>alert('E-mail nï¿½o encontrado!'); window.location.href = 'rec_senha.jsp';</script>");
         }
 
         rs.close();

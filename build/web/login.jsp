@@ -68,7 +68,7 @@
                                 if (senha != null && senha.equals(senhaHash)) {
                                     // Senha correta
                                     session.setAttribute("usuario", usuario);
-                                    response.sendRedirect("welcome.jsp");
+                                    response.sendRedirect("inicio/inicio.html");
                                 } else {
                                     // Senha incorreta
                                     response.sendRedirect("login_fail.jsp");

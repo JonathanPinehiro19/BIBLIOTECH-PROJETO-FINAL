@@ -1,0 +1,1 @@
+Pasta para guadar variaveis que serão utilizadas no projeto

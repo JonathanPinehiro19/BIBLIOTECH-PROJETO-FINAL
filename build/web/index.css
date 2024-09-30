@@ -4,14 +4,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-.container input-group-append {
-    height: 2.5rem;
-                display: flex;
-                align-items: flex-end;
-                justify-content: center;
-                cursor: pointer;
-                padding: 0 10px; /* Ajuste conforme necessário */
-}
+
 .container {
     font-family: Arial, Helvetica, sans-serif;
     background: #F8F9FD;
