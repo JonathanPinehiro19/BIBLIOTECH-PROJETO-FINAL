@@ -2,17 +2,17 @@
 <%@ page import="java.sql.*" %>
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="/index.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="https://iili.io/dPzedMX.png">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="/index.css">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="https://iili.io/dPzedMX.png">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
     <center>
         <div id="login" class="d-flex justify-content-center align-items-center min-vh-100">
             <div class="container card shadow-sm">
@@ -42,7 +42,7 @@
                         String senha = request.getParameter("senha");
 
                         // Configurando a conexão com o banco de dados
-                        String url = "jdbc:postgresql://localhost:5432/bibliotech";
+                        String url = "jdbc:postgresql://localhost:5432/bibliotech?useUnicode=true&characterEncoding=UTF-8";
                         String dbUser = "postgres";
                         String dbPassword = "admin";
                         Connection conn = null;
@@ -68,7 +68,7 @@
                                 if (senha != null && senha.equals(senhaHash)) {
                                     // Senha correta
                                     session.setAttribute("usuario", usuario);
-                                    response.sendRedirect("welcome.jsp");
+                                    response.sendRedirect("inicio/inicio.html");
                                 } else {
                                     // Senha incorreta
                                     response.sendRedirect("login_fail.jsp");
@@ -83,13 +83,23 @@
                         } finally {
                             // Fechando conexões
                             try {
-                                if (rs != null) rs.close();
-                                if (pstmt != null) pstmt.close();
-                                if (conn != null) conn.close();
+                                if (rs != null) {
+                                    rs.close();
+                                }
+                                if (pstmt != null) {
+                                    pstmt.close();
+                                }
+                                if (conn != null) {
+                                    conn.close();
+                                }
                             } catch (SQLException e) {
                                 e.printStackTrace();
                             }
                         }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
                     %>
                 </div>
             </div>
